@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void sortearNumero (View view){
 
-        TextView textResuldado = findViewById(R.id.textResultado);
-        textResuldado.setText("O sorteado foi: ");
+        // atribuindo a textView "texResultado" a variavel "sorteado"
+        TextView sorteado = findViewById(R.id.textResultado);
 
+        // gera um numero X aleatorio inteiro
+        int x = new Random().nextInt(10);
+
+        // setA o numero sorteado e uma msg a variavel "sorteado" que é a texResultado
+        sorteado.setText("O sorteado foi: "+ x);
     }
 }
